@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lamedra</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="Frame 1321316356(1).svg">
+  <style>
+    /* Course hover panel (mini-footer style) */
+    .course-menu {
+      position: relative;
+    }
+
+    .course-panel {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      width: auto;
+      min-width: 320px;
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      padding: 1rem;
+      z-index: 1050;
+      opacity: 0;
+      transition: opacity 150ms ease-in-out;
+    }
+
+     .course-menu .bi-caret-down-fill {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    }
+
+    .course-panel li a:hover {
+    color: #46C78F;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    }
+    
+    .course-menu:hover .bi-caret-down-fill {
+    transform: rotate(180deg);
+    }
+    .course-menu:hover .course-panel {
+      display: block;
+      opacity: 1;
+    }
+
+    @media (max-width: 991px) {
+      .course-panel {
+        position: static;
+        width: 100%;
+      }
+    }
+
+    
+    .carousel-indicators {
+      bottom: 20px;
+      gap: 8px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-indicators [data-bs-target]:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+      transform: scale(1.1);
+    }
+
+    
+    .carousel-indicators .active {
+      width: 28px;
+      height: 12px;
+      border-radius: 6px;
+      background-color: #46C78F;
+      border-color: #46C78F;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg  sticky-top shadow" style="background-color: #46C78F;">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold fs-3" href="#">
+        Lamedra
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item fw-semibold fs-5">
+            <a class="nav-link active " aria-current="page" href="#">Home</a>
+          </li>
+
+          <li class="nav-item course-menu">
+            <a class="nav-link fw-semibold fs-5 align-items-center justify-content-center" href="#">Courses <i class="bi bi-caret-down-fill"></i></a>
+            <div class="course-panel">
+              <h6 class="mb-2">Start Learning</h6>
+              <ul class="list-unstyled mb-3 align-items-beetween">
+                <li><a href="#" class="text-decoration-none text-dark fw-semibold">English</a></li>
+                <li><a href="#" class="text-decoration-none text-dark fw-semibold">IT</a></li>
+                <li><a href="#" class="text-decoration-none text-dark fw-semibold">Math</a></li>
+                <li><a href="#" class="text-decoration-none text-dark fw-semibold">Science</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <form class="d-flex align-items-center" role="search">
+          <input class="form-control flex-grow-1 me-2 text-center" type="search" placeholder="What you want learn today?" aria-label="What are you looking for?" style="min-width: 280px;">
+
+          <button class="btn btn-outline-success text-black fw-bold" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<section class="bg-dark text-white py-5">
+ <div class="container py-5">
+   <div class="row align-items-center g-5">
+    <div class="col-lg-6">
+      <span class="badge text-dark fs-6 px-3 py-2 rounded-pill" style="background-color: #46C78F;">Work Smarter,Not Harder</span>
+      <h1 class="display-3 fw-bold lh-1 mb-4">level up<br><span style="color: #46C78F;"> your skills </span> <br> With Lamedra</h1>
+      <p class="lead text-secondary mb-4">Enhance your knowledge and advance your career with our comprehensive courses.</p>
+      <div class="d-flex flex-wrap gap-3">
+        <a href="" class="btn btn-outline text-dark btn-lg fw-bold px-4" style="background-color: #46C78F; border-color: #46C78F; color: #fff;">Get Started</a>
+        <a href="" class="btn btn-outline-success text-white btn-lg fw-bold px-4">Learn More</a>
+      </div>
+      <div class="row row-cols-3 g-3 mt-3 text-center">
+        <div class="col">
+          <div class="border border-white rounded-3 p-3">
+            <div class="fs-3 fw-bold" style="color: #46C78F;">100+</div>
+            <div class="text-success small">Courses Available</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="border border-white rounded-3 p-3">
+            <div class="fs-3 fw-bold" style="color: #46C78F;">50+</div>
+            <div class="text-success small">Professional Teachers</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="border border-white rounded-3 p-3">
+            <div class="fs-3 fw-bold" style="color: #46C78F;">89%</div>
+            <div class="text-success small">Student Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 text-center">
+      <div class="bg-opacity-10 border border-opacity-25 rounded-4 p-5 d-inline-block" style="background-color: #46C78F; border-color: #46C78F;">
+        <h1>Our flagship course <i class="bi bi-award"></i> </h1>
+        <div class="row g-3 mt-3">
+          <div class="col-6">
+            <div class="bg-dark border border-secondary rounded-3 p-3 text-start">
+              <i class="bi bi-calculator-fill" style="color: #46C78F;"></i>
+              <div class="fw-semibold mt-2">Flagship Course</div>
+              <div class="text-secondary small">Math</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="bg-dark border border-secondary rounded-3 p-3 text-start">
+              <i class="bi bi-flask-fill" style="color: #46C78F;"></i>
+              <div class="fw-semibold mt-2">Flagship Course</div>
+              <div class="text-secondary small">Science</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="bg-dark border border-secondary rounded-3 p-3 text-start">
+              <i class="bi bi-code-slash" style="color: #46C78F;"></i>
+              <div class="fw-semibold mt-2">Flagship Course</div>
+              <div class="text-secondary small">IT</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="bg-dark border border-secondary rounded-3 p-3 text-start">
+              <i class="bi bi-chat-dots-fill" style="color: #46C78F;"></i>
+              <div class="fw-semibold mt-2">Flagship Course</div>
+              <div class="text-secondary small">English</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+ </div>
+</section>
+<div class="container position-relative">
+  <div class="bg-white p-4 rounded-4 shadow-lg 
+              position-absolute top-0 start-50 translate-middle-x"
+       style="margin-top: -55px; width: 100%; max-width: 1000px;">
+    <div class="row text-center g-3">
+      <div class="col-lg-3">
+        <div class="p-3 border border-dark rounded-3 h-100 fw-semibold "> <i class="bi bi-globe-americas-fill"></i> Language</div>
+      </div>
+      <div class="col-lg-3">
+        <div class="p-3 border border-dark rounded-3 h-100 fw-semibold"> <i class="bi bi-window-stack"></i> Web </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="p-3 border border-dark rounded-3 h-100 fw-semibold"> <i class="bi bi-people-fill"></i> Social</div>
+      </div>
+      <div class="col-lg-3">
+        <div class="p-3 border border-dark rounded-3 h-100 fw-semibold"> <i class="bi bi-capsule"> </i>Medical</div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="bg-dark py-5">
+  <div class="container py-5">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="Illegenix.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="Illegenix(4).png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="Illegenix(5).png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  </div>
+</section>
+<div class="container py-5">
+  <div class="row text-center">
+    <div class="col-lg-4">
+      <div class="btn btn-outline-dark shadow-sm border border-dark rounded-3 p-3">
+        <i class="bi bi-play-circle fs-1" style="color: #46C78F;"></i>
+        <div class="fw-semibold mt-2">Start learning today</div>
+        <div class="text-secondary small">Start learning today with Lamedra and take your first step toward mastering valuable digital skills.</div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="btn btn-outline-dark  shadow-sm border border-dark rounded-3 p-3">
+        <i class="bi bi-lightning-charge fs-1" style="color: #46C78F;"></i>
+        <div class="fw-semibold mt-2">Learn faster with Lamedra</div>
+        <div class="text-secondary small">Learn faster with Lamedra through structured lessons and hands-on projects.</div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="btn btn-outline-dark shadow-sm border border-dark rounded-3 p-3">
+        <i class="bi bi-rocket fs-1" style="color: #46C78F;"></i>
+        <div class="fw-semibold mt-2">Reach your future</div>
+        <div class="text-secondary small">Reach your future with Lamedra by turning your skills into real opportunities and career paths.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5">
+  <h5>Learn From 350+ Sources</h5>
+  <div class="d-flex flex-wrap justify-content-center align-items-center scroll-hidden overflow-auto gap-4">
+    <div class="bg-white text-dark border border-2 fs-6 px-4 py-2 rounded-pill shadow-sm"> <img src="google(1).png" alt="" style="height: 25px; width: 25px;"> Google</div>
+    <div class="bg-white text-dark border border-2 fs-6 px-4 py-2 rounded-pill shadow-sm"> <img src="chatgpt(1).png" alt="" style="height: 25px; width: 25px;"> ChatGPT</div>
+    <div class="bg-white text-dark border border-2 fs-6 px-4 py-2 rounded-pill shadow-sm"> <img src="idn bs(1).png" alt="" style="height: 25px; width: 25px;"> IDN BS</div>
+    <div class="bg-white text-dark border border-2 fs-6 px-4 py-2 rounded-pill shadow-sm"> <img src="microsoft(1).png" alt="" style="height: 25px; width: 25px;"> Microsoft</div>
+    <div class="bg-white text-dark border border-2 fs-6 px-4 py-2 rounded-pill shadow-sm"> <img src="coursera(1).png" alt="" style="height: 25px; width: 25px;"> Coursera</div>
+    <div class="bg-white text-dark border border-2 fs-6 px-4 py-2 rounded-pill shadow-sm"> <img src="freecodecamp(1).png" alt="" style="height: 25px; width: 35px;"> FreeCodeCamp</div>
+    <div class="bg-white text-dark border border-2 fs-6 px-4 py-2 rounded-pill shadow-sm"> <img src="duolingo(1).png" alt="" style="height: 35px; width: 35px;"> Duolingo</div>
+    <div class="bg-white text-dark border border-2 fs-6 px-4 py-2 rounded-pill shadow-sm"> <img src="deepseek(1).png" alt="" style="height: 25px; width: 25px;"> Deepseek</div>
+    <div class="bg-white text-dark border border-2 fs-6 px-4 py-2 rounded-pill shadow-sm"> <img src="codeacademy(1).png" alt="" style="height: 25px; width: 25px;"> CodeAcademy</div>
+    <div class="bg-white text-dark border border-2 fs-6 px-4 py-2 rounded-pill shadow-sm"> <img src="nus(1).png" alt="" style="height: 25px; width: 25px;"> National University Singapore</div>
+  </div>
+</div>
+<section class="bg-white py-5">
+  <div class="container py-5">
+    <h5>What they Say About Lamedra</h5>
+    <div class=" row align-items-center"> 
+      <div class="col-lg-4">
+            <div class="card-border shadow-sm rounded-4 h-100 p-4 border border-2">
+              <div class="d-flex mb-3 me-3">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p class="text-secondary fst-italic mb-4">"Learners love Lamedra for its comprehensive courses and expert instructors!"</p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <div class=" rounded-circle d-flex align-items-center justify-content-center" style="width:48px; height:48px; background-color: #46C78F;">
+                  <i class="bi bi-person-fill text-dark fs-5"></i>
+                </div>
+                <div class="fw-bold"> -Jone Doe</div>
+              </div>
+            </div>
+          </div>
+      <div class="col-lg-4">
+            <div class="card-border shadow-sm rounded-4 h-100 p-4 border border-2">
+              <div class="d-flex mb-3 me-3">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p class="text-secondary fst-italic mb-4">"Lamedra's interactive learning approach has transformed my understanding of programming concepts!"</p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <div class=" rounded-circle d-flex align-items-center justify-content-center" style="width:48px; height:48px; background-color: #46C78F;">
+                  <i class="bi bi-person-fill text-dark fs-5"></i>
+                </div>
+                <div class="fw-bold"> -Pseudonym</div>
+                <div class="text-secondary small"></div>
+              </div>
+            </div>
+          </div>
+      <div class="col-lg-4">
+            <div class="card-border shadow-sm rounded-4 h-100 p-4 border border-2">
+              <div class="d-flex mb-3 me-3">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p class="text-secondary fst-italic mb-4">"Lamedra’s user-friendly interface makes learning a breeze, allowing you to navigate courses easily, stay focused"</p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <div class="rounded-circle d-flex align-items-center justify-content-center" style="width:48px; height:48px; background-color: #46C78F;">
+                  <i class="bi bi-person-fill text-dark fs-5"></i>
+                </div>
+                <div class="fw-bold"> -Alias</div>
+                <div class="text-secondary small"></div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-5">
+  <div class="container my-5">
+    <h5>Frequently Asked Questions</h5>
+  <div class="accordion" id="faq">
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-white shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q1">
+          What is Lamedra?
+        </button>
+      </h2>
+      <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+          Lamedra is an online learning platform designed to help you build practical digital skills through structured courses and real-world projects.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-white shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q2">
+          Who can join Lamedra?
+        </button>
+      </h2>
+      <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+          Anyone can join Lamedra, from beginners who are just starting out to learners who want to improve and advance their existing skills.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-white shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q3">
+          How does learning on Lamedra work?
+        </button>
+      </h2>
+      <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+          Lamedra offers step-by-step courses, combining lessons and hands-on projects to help you understand concepts and apply them effectively.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-white shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q4">
+          Do I need prior experience?
+        </button>
+      </h2>
+      <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+          No prior experience is required. Many courses are designed for beginners and guide you from the basics to more advanced levels.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-white shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q5">
+         Can I learn at my own pace?
+        </button>
+      </h2>
+      <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+          Yes, Lamedra allows you to learn anytime and anywhere, so you can progress at your own speed without pressure.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-white shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q6">
+          What kind of skills can I learn?
+        </button>
+      </h2>
+      <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+          You can learn a variety of digital skills such as web development, design, programming, and other in-demand technologies.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-white shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q7">
+          How will Lamedra help my career?
+        </button>
+      </h2>
+      <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+          Lamedra helps you gain practical skills and real project experience, making you more prepared for job opportunities and career growth.        </div>
+      </div>
+    </div>
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-white shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q8">
+          Are there any certificates after completing a course?
+        </button>
+      </h2>
+      <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+          Yes, you will receive a certificate after completing a course, which you can use to showcase your skills and achievements.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-white shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q9">
+          How long does it take to finish a course?
+        </button>
+      </h2>
+      <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+          The duration varies depending on the course, but you can complete it at your own pace based on your schedule and learning speed.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-white shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q710">
+          Why should I choose Lamedra?
+        </button>
+      </h2>
+      <div id="q710" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+          Lamedra focuses on practical learning, real projects, and a simple learning experience to help you achieve results faster.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+<footer class="bg-dark py-5 text-white">
+  <div class="container py-5">
+    <div class="row gap-4 mb-5">
+      <div class="col-lg-4">
+        <h2 class=" fw-bold mb-2" style="color: #46C78F;">Lamedra</h2>
+        <p class="text-white-50">Lamedra is a platform that offers practical digital skills training to help you advance your career.</p>
+        <p class="text-white-50">Since 2017</p>
+        <div class="d-flex gap-2 mt-4">
+          <a href="" class="btn btn-outline-success btn-sm rounded-circle p-2" style="height: 37px; width: 37px;"><i class="bi bi-facebook"></i></a>
+          <a href="" class="btn btn-outline-success btn-sm rounded-circle p-2" style="height: 37px; width: 37px;"><i class="bi bi-twitter"></i></a>
+          <a href="" class="btn btn-outline-success btn-sm rounded-circle p-2" style="height: 37px; width: 37px;"><i class="bi bi-instagram"></i></a>
+          <a href="" class="btn btn-outline-success btn-sm rounded-circle p-2" style="height: 37px; width: 37px;"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <h6 class="fw-bold"style="color: #46C78F;">Our Courses</h6>
+        <ul class="list-unstyled text-white-50 small">
+          <li class="mb-2 text-secondary text-decoration-none"><i class="bi bi-code-slash"> </i>IT</li>
+          <li class="mb-2 text-secondary text-decoration-none"><i class="bi bi-flask-fill"> </i>Science</li>
+          <li class="mb-2 text-secondary text-decoration-none"><i class="bi bi-calculator-fill"> </i>Math</li>
+          <li class="mb-2 text-secondary text-decoration-none"><i class="bi bi-chat-dots"> </i>English</li>
+          <li class="mb-2 text-secondary text-decoration-none"><i class="bi bi-globe-americas-fill"> </i>Language</li>
+          <li class="mb-2 text-secondary text-decoration-none"><i class="bi bi-capsule"> </i>Medical</li>
+          <li class="mb-2 text-secondary text-decoration-none"><i class="bi bi-window-stack"> </i>Web Development</li>
+          <li class="mb-2 text-secondary text-decoration-none"><i class="bi bi-people-fill"> </i>Social</li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+          <h6 class="fw-bold" style="color: #46C78F;">Newsletter</h6>
+          <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nisi rerum mollitia illum dolorem, cupiditate blanditiis necessitatibus exercitationem, molestiae, error sequi amet! Excepturi consectetur impedit ab aliquid, alias a ut.</p>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control bg-dark text-white" placeholder="Recipient’s username" aria-label="Recipient’s username" aria-describedby="button-addon2">
+              <button class="btn" style="background-color: #46C78F;" type="button" id="button-addon2">Button</button>
+          </div>
+        </div>
+        <div>
+          <hr>
+          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+            <p class="text-secondary">© 2024 Lamedra. All rights reserved.</p>
+            <div class="d-flex gap-4">
+              <p class="text-secondary">Privacy Policy</p>
+              <p class="text-secondary">Terms of Service</p>
+              <p class="text-secondary">sitemap</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoMj0jmI0S1bVnEw7rZsQOQh5y4Jr0Sf0BXtJf5dY8nB9Ej" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
